@@ -16,11 +16,11 @@ function App() {
       console.log("data", data);
       setTasks(data);
     });
-  });
+  }, []);
 
   useEffect(() => {
     fetchTasks();
-  }, []);
+  }, [fetchTasks]);
 
   return (
     <div className="App">
